@@ -6,7 +6,7 @@ import CTA from "./components/CTA";
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#0a0f0d] relative text-white">
+    <div className="min-h-screen bg-[#0e1512] relative text-white">
       {/* global grain for texture */}
       <div className="grain-overlay" aria-hidden="true" />
 
@@ -21,9 +21,9 @@ function App() {
             <div className="w-8 h-8 rounded-md bg-[#00cc5c] flex items-center justify-center">
               <span className="text-white font-black text-sm">G</span>
             </div>
-            <span className="text-sm text-white/60">© {new Date().getFullYear()} GreenLight.ai</span>
+            <span className="text-sm text-white/70">© {new Date().getFullYear()} GreenLight.ai</span>
           </div>
-          <div className="text-sm text-white/60">
+          <div className="text-sm text-white/70">
             Made for modern People Ops teams
           </div>
         </div>
