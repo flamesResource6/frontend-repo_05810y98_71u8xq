@@ -1,4 +1,4 @@
-import { CheckCircle2, Shield, Globe, Banknote, Clock } from "lucide-react";
+import { CheckCircle2, Shield, Globe, Banknote, Clock, Sparkles } from "lucide-react";
 
 const features = [
   {
@@ -29,18 +29,25 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-20 bg-gradient-to-b from-white to-[#f7f9fc]">
+    <section id="features" className="py-24 relative">
+      {/* soft spotlight */}
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-white via-[#f7f9fc] to-white" />
+      <div className="absolute inset-x-0 top-0 -z-10 h-40 bg-gradient-to-r from-[#00cc5c]/10 via-transparent to-[#5897f4]/10" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
-          <h2 className="text-3xl sm:text-4xl font-black text-[#2d2d2d] tracking-tight">Everything you need to manage contractors</h2>
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/70 backdrop-blur px-3 py-1 ring-1 ring-[#2d2d2d]/10 text-xs text-[#2d2d2d]">
+            <Sparkles size={14} className="text-[#00cc5c]" /> New in v3
+          </div>
+          <h2 className="mt-3 text-3xl sm:text-4xl font-black text-[#2d2d2d] tracking-tight">Everything you need to manage contractors</h2>
           <p className="mt-3 text-[#2d2d2d]/80">All the building blocks to scale a flexible workforce without the chaos.</p>
         </div>
 
         <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map(({ icon: Icon, title, desc, color }) => (
-            <div key={title} className="p-6 rounded-2xl bg-white border border-[#2d2d2d]/10 shadow-[0_15px_50px_rgba(45,45,45,0.07)]">
+            <div key={title} className="group p-6 rounded-2xl bg-white border border-[#2d2d2d]/10 shadow-[0_15px_50px_rgba(45,45,45,0.07)] hover:shadow-[0_25px_60px_rgba(45,45,45,0.12)] transition-shadow">
               <div className="flex items-center gap-3 mb-3">
-                <Icon style={{ color }} size={22} />
+                <div className="h-9 w-9 rounded-md" style={{ backgroundColor: color + '20' }} />
                 <h3 className="font-semibold text-[#2d2d2d]">{title}</h3>
               </div>
               <p className="text-sm text-[#2d2d2d]/75">{desc}</p>
@@ -48,6 +55,7 @@ export default function Features() {
                 <CheckCircle2 size={16} className="text-[#00cc5c]" />
                 Included
               </div>
+              <div className="mt-6 h-1 rounded-full" style={{ background: `linear-gradient(90deg, ${color} 0%, ${color}66 100%)` }} />
             </div>
           ))}
         </div>
