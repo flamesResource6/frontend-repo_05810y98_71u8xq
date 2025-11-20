@@ -55,8 +55,8 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="relative">
-            <div className="relative bg-white rounded-2xl border border-[#2d2d2d]/10 p-4 shadow-[0_30px_80px_rgba(45,45,45,0.15)]">
-              <div className="aspect-[4/3] rounded-xl bg-gradient-to-br from-[#00cc5c]/10 via-white to-[#5897f4]/10 border border-[#2d2d2d]/10" />
+            <div className="relative bg-white rounded-2xl border border-[#2d2d2d]/10 p-4 shadow-[0_30px_80px_rgba(45,45,45,0.15)] gradient-border">
+              <div className="aspect-[4/3] rounded-xl bg-gradient-to-br from-[#00cc5c]/20 via-white to-[#5897f4]/20 border border-[#2d2d2d]/10" />
               <div className="absolute -bottom-6 -right-6 w-28 h-28 rounded-xl bg-[#5897f4] shadow-[0_20px_60px_rgba(88,151,244,0.5)] animate-float" />
               <div className="absolute -top-6 -left-6 w-24 h-24 rounded-xl bg-[#00cc5c] shadow-[0_20px_60px_rgba(0,204,92,0.5)] animate-float" />
             </div>

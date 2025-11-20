@@ -6,7 +6,10 @@ import CTA from "./components/CTA";
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white relative">
+      {/* global grain for texture */}
+      <div className="grain-overlay" aria-hidden="true" />
+
       <Navbar />
       <Hero />
       <Logos />

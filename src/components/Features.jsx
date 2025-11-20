@@ -45,9 +45,11 @@ export default function Features() {
 
         <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map(({ icon: Icon, title, desc, color }) => (
-            <div key={title} className="group p-6 rounded-2xl bg-white border border-[#2d2d2d]/10 shadow-[0_15px_50px_rgba(45,45,45,0.07)] hover:shadow-[0_25px_60px_rgba(45,45,45,0.12)] transition-shadow">
+            <div key={title} className="group p-6 rounded-2xl bg-white border border-[#2d2d2d]/10 shadow-[0_15px_50px_rgba(45,45,45,0.07)] hover:shadow-[0_25px_80px_rgba(45,45,45,0.18)] transition-shadow gradient-border tilt">
               <div className="flex items-center gap-3 mb-3">
-                <div className="h-9 w-9 rounded-md" style={{ backgroundColor: color + '20' }} />
+                <div className="h-9 w-9 rounded-md flex items-center justify-center" style={{ backgroundColor: color + '20' }}>
+                  <Icon className="text-[#2d2d2d]" size={18} />
+                </div>
                 <h3 className="font-semibold text-[#2d2d2d]">{title}</h3>
               </div>
               <p className="text-sm text-[#2d2d2d]/75">{desc}</p>
